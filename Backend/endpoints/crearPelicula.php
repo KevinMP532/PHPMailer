@@ -23,7 +23,9 @@ $data = json_decode(file_get_contents("php://input"));
 $pelicula->nombre = $data->Nombre;
 $pelicula->img = $data->Img;
 $pepe = $pelicula->crearDatos();
-$content = "La pelicula $pelicula->nombre ha sido agregada.";
+$content = "Nueva pelicula agregada.
+Nombre: $pelicula->nombre,
+Imagen: $pelicula->img";
 function sendEmail($content)
 {
 
@@ -38,7 +40,7 @@ function sendEmail($content)
     $mail->Subject = "Peliculas Kevin Mora";
     $mail->setFrom("kevin.mora@anima.edu.uy");
     $mail->Body = "$content";
-    $mail->addAddress("kevin.mora@anima.edu.uy");
+    $mail->addAddress("rodrigoalbano@anima.edu.uy");
     if ($mail->Send()) {
         echo "True";
     } else {
