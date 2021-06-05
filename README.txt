@@ -1,3 +1,5 @@
+Repo Git: https://github.com/KevinMP532/PHPMailer.git
+
 Endpoint: http://localhost/PHPMailer/Backend/endpoints/crearPelicula.php
 
 Desc: Inserta los datos ingresados en la base de datos y notifica al profesor mediante un email a "rodrigoalbano@anima.edu.uy". La ID es auto-generada y el estado siempre es 1.
