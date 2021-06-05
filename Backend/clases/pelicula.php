@@ -16,10 +16,10 @@ class pelicula
     {
 
         $query = "SELECT
-                 *
+                 nombre, idPelicula
             FROM
                 pelicula
-           ";
+           WHERE activo = 1";
 
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
